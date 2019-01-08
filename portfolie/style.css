@@ -1,0 +1,414 @@
+/*-----overordnet-----*/
+
+img {
+    width: 50%;
+    vertical-align: middle;
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Dosis', sans-serif;
+    text-align: center;
+}
+
+header,
+body {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+nav {
+    z-index: 3;
+}
+
+hr {
+    width: 20vw;
+    color: black;
+}
+
+p {
+    font-family: 'Encode Sans Condensed', sans-serif;
+}
+
+.hide {
+    display: none;
+}
+
+/*-------download CV--------*/
+.button {
+    font-family: 'Dosis', sans-serif;
+    font-size: 1.2rem;
+    background-color: #a6dbf0;
+    border-radius: 20vw;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    color: black;
+    width: 200px;
+    height: 50px;
+    line-height: 50px;
+    /*for at få teksten i midten vertikalt*/
+    text-decoration: none;
+    font-weight: 500;
+    border: 4px solid white;
+    cursor: crosshair;
+    border: solid 0.5px black;
+}
+
+/*-------Menu--------*/
+
+
+/* unvisited link */
+header nav a:link {
+    color: black;
+}
+
+/* visited link */
+header nav a:visited {
+    color: black;
+}
+
+/* mouse over link */
+header nav a:hover {
+    color: darkgrey;
+}
+
+/* selected link */
+header nav a:active {
+    color: darkgrey;
+}
+
+header {
+    display: flex;
+    flex-wrap: wrap;
+    position: fixed;
+    width: 100%;
+    background-image: linear-gradient(rgb(255, 255, 255), rgba(255, 255, 255, 0.84));
+    z-index: 2;
+    justify-content: space-between;
+}
+
+header nav {
+    display: flex;
+    flex-direction: row;
+    text-align: right;
+    margin: 1rem 1rem;
+
+}
+
+header nav a {
+    font-size: 1.4rem;
+    margin: 1;
+    padding: 0.5rem;
+    font-family: 'Dosis', sans-serif;
+    text-decoration: none;
+}
+
+.navn {
+    font-family: 'Dosis', sans-serif;
+    font-size: 1.4rem;
+    margin: 1rem;
+    padding: 0.5rem;
+}
+
+.burgermenu {
+    padding: 1rem 2rem 0rem 0rem;
+}
+
+@media only screen and (max-width:725px) {
+
+    .hovedmenu {
+        display: none;
+    }
+
+}
+
+@media only screen and (min-width:724px) {
+    .burgermenu {
+        display: none;
+    }
+
+}
+
+/*-------brugermenu--------*/
+
+.bar1,
+.bar2,
+.bar3 {
+    display: flex;
+    flex-wrap: wrap;
+    width: 35px;
+    height: 5px;
+    background-color: #575757;
+    margin: 6px 0;
+    transition: 0.4s;
+
+}
+
+
+.change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+
+.change .bar2 {
+    opacity: 0;
+}
+
+
+.change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px);
+}
+
+/*-------Home--------*/
+
+#home {
+    background-size: 100% 100%;
+    display: flex;
+    flex-direction: column;
+    background-image: url(billeder/wave.jpeg);
+    height: 35vw;
+    padding: 20vw 0vw 6vw 0vw;
+}
+
+.overskrift {
+    color: white;
+    font-family: 'Dosis', sans-serif;
+    font-size: 2rem;
+    align-self: center;
+
+}
+
+.mig {
+    align-self: center;
+
+}
+
+.mig img {
+    border-radius: 50%;
+    width: 20vw;
+}
+
+/*--------about------*/
+
+#about p {
+    padding: 0vw 20vw;
+}
+
+/*---------portfolio---------*/
+
+
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 5px 5px;
+    z-index: 1;
+}
+
+.column {
+    flex-grow: 1;
+    display: flex;
+    flex-basis: 200px;
+    margin: 5px;
+    padding: 5px 5px;
+    text-align: center;
+}
+
+.middle {
+    flex-grow: 1;
+    margin: 5vw;
+}
+
+.image {
+    margin: 5vw;
+}
+
+#pilotfilm .image {
+    justify-content: flex-end;
+}
+
+.text a {
+    text-decoration: none;
+    font-family: 'Dosis', sans-serif;
+    background-color: black;
+    font-size: 1.5rem;
+}
+
+/* unvisited link */
+.text a:link {
+    color: black;
+}
+
+/* visited link */
+.text a:visited {
+    color: black;
+}
+
+/* mouse over link */
+.text a:hover {
+    color: darkgrey;
+}
+
+/* selected link */
+.text a:active {
+    color: darkgrey;
+}
+
+@media only screen and (max-width:725px) {
+
+    .container {
+        position: relative;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        padding: 5px 5px;
+    }
+
+    .image {
+        opacity: 1;
+        display: block;
+        position: relative;
+        width: 86%;
+        height: 86%;
+        transition: 1s ease;
+        backface-visibility: hidden;
+        z-index: 0;
+
+    }
+
+
+    .middle {
+        transition: .5s ease;
+        opacity: 0;
+        position: absolute;
+        top: 43.5%;
+        left: 43.5%;
+        height: 80%;
+        width: 80%;
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-100%, -100%);
+        text-align: center;
+    }
+
+    .container:hover .image {
+        opacity: 0.3;
+    }
+
+    .container:hover .middle {
+        opacity: 1;
+    }
+
+    .text {
+        position: absolute;
+        background-color: rgba(166, 219, 240, 0.76);
+        color: white;
+        font-size: 1rem;
+        /*        top: 13%;*/
+        padding: 4vw;
+        z-index: 2;
+        height: 269px;
+        width: 279px;
+        text-align: center;
+
+    }
+
+    .overskrift {
+        color: white;
+        font-family: 'Dosis', sans-serif;
+        font-size: 1rem;
+        align-self: center;
+
+    }
+
+    .navn {
+        font-family: 'Dosis', sans-serif;
+        font-size: 1rem;
+        margin: 1rem;
+        padding: 0.5rem;
+    }
+
+
+    .box {
+        position: absolute;
+        justify-content: flex-end;
+        height: 180px;
+        width: 150px;
+        top: 18.2vw;
+        left: 60vw;
+        background-color: rgba(255, 255, 255, 0.88);
+    }
+
+
+    .ned_menu {
+        display: flex;
+        flex-direction: column;
+        text-align: right;
+        align-items: flex-end;
+        margin: 3vw;
+
+    }
+
+    .ned_menu a {
+        font-size: 1.1rem;
+        margin: 0.25rem;
+        padding: 0.25rem;
+        font-family: 'Dosis', sans-serif;
+        text-decoration: none;
+        color: black;
+    }
+
+    .portfolio_overskrift {
+        font-size: 0.7rem;
+    }
+}
+
+/*---------overskirfter---------*/
+
+
+.portfolio_overskrift {
+    padding: 50px 0 0 0;
+}
+
+/*---------grid---------*/
+
+
+#stilart_splash .content {
+    display: flex;
+    flex-wrap: wrap;
+    /*
+    flex-wrap: wrap-reverse;
+    padding: 2px 1px;
+    align-items: baseline;
+    flex-direction: row;
+*/
+}
+
+#stilart_splash .columns {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+
+    /*
+    flex-basis: 600px;
+    flex-grow: 1;
+*/
+    /*
+    margin-top: 8px;
+    justify-content: flex-start;
+*/
+
+}
+
+/*---------footer---------*/
+#contact a {
+    text-decoration: none;
+
+}
+
+#contact {
+    text-align: center;
+}
